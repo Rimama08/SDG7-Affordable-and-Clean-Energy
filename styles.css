@@ -328,4 +328,52 @@ nav a:hover {
 .awareness-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+
+}
+
+/* Add top padding to account for fixed navbar */
+.katawan {
+    background: url(Main.jpeg) no-repeat center center/cover;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;  /* space for navbar */
+    padding-left: 250px; /* desktop spacing */
+    padding-right: 32px; /* optional right spacing */
+    position: relative;
+}
+
+/* Overlay */
+.katawan::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0,.45);
+}
+
+/* Hero content */
+.katawan-laman { 
+    position: relative;
+    z-index: 100;
+    max-width: 700px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .katawan {
+        padding-left: 20px;   /* remove large left padding */
+        padding-right: 20px;  /* small breathing space */
+        padding-top: 80px;    /* still account for navbar */
+    }
+
+    .katawan h1 {
+        font-size: 3rem;      /* scale down heading */
+        line-height: 1.2;
+    }
+
+    .katawan p {
+        font-size: 14px;      /* smaller text */
+        margin-bottom: 1.5rem;
+    }
 }
